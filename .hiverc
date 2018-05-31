@@ -1,0 +1,9 @@
+SET hive.execution.engine=tez;
+
+SET hive.cbo.enable=true;
+SET hive.compute.query.using.stats=true;
+SET hive.stats.fetch.column.stats=true;
+SET hive.stats.fetch.partition.stats=true;
+
+SET hive.vectorized.execution.enabled=true;
+SET hive.vectorized.execution.reduce.enabled=true;

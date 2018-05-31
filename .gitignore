@@ -1,6 +1,7 @@
 *
 !.gitignore
 !.bash_aliases
+!.hiverc
 !.vimrc
 !.vim
 !.vim/**

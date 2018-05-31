@@ -1,4 +1,6 @@
+" syntax highlighting
 syntax enable
+
 set nu
 set showcmd
 set wildmenu
@@ -42,3 +44,15 @@ noremap <Right> <nop>
 " key mappings in insert mode
 inoremap kl <esc>
 inoremap <esc> <nop>
+
+" toggle paste before and after pasting
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+	set pastetoggle=<Esc>[201~
+	set paste
+	return ""
+endfunction
